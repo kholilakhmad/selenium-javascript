@@ -15,7 +15,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests --coverage"
+    "test": "mocha tests"
   },
   "dependencies": {
     "selenium-webdriver": "^4.29.0"

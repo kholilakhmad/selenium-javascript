@@ -6,7 +6,7 @@ class WebFormPage {
         this.textInput = By.id('my-text-id');
         this.passwordInput = By.name('my-password');
         this.textArea = By.name('my-textarea');
-        this.checkbox = By.name('my-checkbox');
+        this.checkbox = By.id('my-check-1'); // Periksa apakah elemen memiliki ID
         this.radioButton = By.id('my-radio-2');
         this.selectDropdown = By.name('my-select');
         this.fileUpload = By.name('my-file');
@@ -31,7 +31,8 @@ class WebFormPage {
     }
 
     async selectCheckbox() {
-        await this.driver.findElement(this.checkbox).click();
+        let checkbox = await this.driver.wait(until.elementLocated(this.checkbox), 5000);
+        await checkbox.click();
     }
 
     async selectRadioButton() {
@@ -49,12 +50,13 @@ class WebFormPage {
     }
 
     async submitForm() {
-        await this.driver.findElement(this.submitButton).click();
+        let button = await this.driver.wait(until.elementLocated(this.submitButton), 5000);
+        await button.click();
     }
 
     async getSuccessMessage() {
-        await this.driver.wait(until.elementLocated(this.successMessage), 5000);
-        return await this.driver.findElement(this.successMessage).getText();
+        let message = await this.driver.wait(until.elementLocated(this.successMessage), 5000);
+        return await message.getText();
     }
 }
 
