@@ -1,0 +1,27 @@
+{
+  "name": "selenium-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/kholilakhmad/selenium-javascript#readme",
+  "bugs": {
+    "url": "https://github.com/kholilakhmad/selenium-javascript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kholilakhmad/selenium-javascript.git"
+  },
+  "license": "ISC",
+  "author": "kholil akhmad",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests --coverage"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.29.0"
+  },
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.1.0"
+  }
+}
